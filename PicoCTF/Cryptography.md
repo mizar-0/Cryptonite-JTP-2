@@ -7,9 +7,12 @@ Wrote code to implement the given instructions. Flag: picoCTF{R0UND_N_R0UND_B6B2
 ## miniRSA
 RSA encryption keys are generated using the product of two very large prime numbers and an exponent `e`. Encryption is more secure for larger primes and larger values of `e`.
 used an online RSA decoder.
+
 flag: picoCTF{n33d_a_lArg3r_e_606ce004}
 
-![miniRSA_sol](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/eea7604e-1886-4d34-9d38-87d75b008ed)
+![miniRSA_sol](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/4190128c-daa7-424d-8f03-371453d7021a)
+
+
 
 
 
