@@ -11,4 +11,4 @@ flag: picoCTF{moooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo0o}
 From the problem statement, it appears that the website searches for files at the given address `/usr/share/nginx/html/`. However, the required file is stored in the root directory itself. To access it without using the absolute path `/flag.txt`, we use `..` which takes us to the previous directory. With the knowledge that we need to jump back 4 times, the relative path to be used is `../../../../flag.txt`
 
 
-flag: picoCTF{7h3_p47h_70_5ucc355_e5fe3d4d
+flag: picoCTF{7h3_p47h_70_5ucc355_e5fe3d4d}
