@@ -12,3 +12,11 @@ From the problem statement, it appears that the website searches for files at th
 
 
 flag: picoCTF{7h3_p47h_70_5ucc355_e5fe3d4d}
+
+## Local authority
+Inspecting the login failure page revealed a file `secure.js` which contained the login credentials. Once logged in, the flag was obtained.
+
+
+flag: picoCTF{j5_15_7r4n5p4r3n7_b0c2c9cb}
+
+![image](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/1aa3a051-2a84-44b2-8c12-4cfa1066e9c0)
