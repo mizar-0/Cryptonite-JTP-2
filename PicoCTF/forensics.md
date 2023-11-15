@@ -25,3 +25,18 @@ After changing the characters, the file could finally open but it still didn't d
 
 
 flag: picoCTF{qu1t3_a_v13w_2020}
+
+## Trivial FTP
+The wireshark capture file contained many packets from which the objects were exported to a known location.
+
+![tftp_sol_A1](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/df571e52-3288-4749-9c7d-f11051109891)
+
+These objects included three `.bmp` images. The text files included rot13 encoded communication, supposedly between two parties using tftp to communicate.
+
+![tftp_sol_A2](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/266a6f91-02ce-4b0d-948c-efd0d2954fdb)
+
+From the communication, it appears that the flag might have been moved after being hidden in one of the images. However the images themselves don't reveal any flags. There's another way to hide messages in images, called steganography, which can be done using the `steghide` package in Linux. After using its `--extract` command with the passphrase DUEDILIGENCE, the flag was obtained from one of the pictures.
+
+![tftp_sol_B](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/2b0df395-274c-4523-86e5-20758dd42a76)
+
+flag: picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}
