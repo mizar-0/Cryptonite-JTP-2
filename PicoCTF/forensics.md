@@ -11,3 +11,17 @@ The encryption used couldn't have been rot13 or hexadecimal because it contained
 ![macrohard_sol_C](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/09260d33-ee56-4050-9094-dca74e4e75a7)
 
 flag: picoCTF{D1d_u_kn0w_ppts_r_z1p5}
+
+## tunn3l_v1s10n
+`cat tunn3l_v1s10n` gave an output that started with BM. Since the first two characters of a file determine its type, therefore it could be inferred that this was a bitmap file. Renamed the file to `tunn3l_v1s10n.bmp`. It still didn't open in Photos. Might have been due to being corrupted. 
+
+When opened in a hex-editor side-by-side with a non-corrupt bitmap file, it was found that some characters in the header had been changed to `BAD` for the given file.
+
+![tunn3l_v1s10n_sol_A](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/f60ef731-2c49-4034-8e10-d3ae3f639929)
+
+After changing the characters, the file could finally open but it still didn't display the flag. Since the challenge is called tunnel vision, it might have been due to the file's dimensions being changed. After finding the bits in the hexdump that represented dimensions, and after multiple trials, the flag was found when the height was changed to 850 pixels. 
+
+![tunn3l_v1s10n_sol_B](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/186f8616-35bd-499e-99ce-4098a1a7be4e)
+
+
+flag: picoCTF{qu1t3_a_v13w_2020}
