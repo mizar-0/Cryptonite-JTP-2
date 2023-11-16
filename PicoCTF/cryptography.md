@@ -14,7 +14,16 @@ flag: picoCTF{n33d_a_lArg3r_e_606ce004}
 
 ![miniRSA_sol](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/4190128c-daa7-424d-8f03-371453d7021a)
 
+
 ## new caeser
+From the given code it appears that there are two functions being used fo encryption.
+
+The first function takes the first letter of the _plaintext_, converts it to 8-bit ASCII, splits it into half, takes the letters whose indices are at the decimal values of the split binary numbers, and adds it to the encoded string. We end up with 2 letters for every letter of the _plaintext_
+
+The second function is a shift function that uses a key to shift the letters of the output from the first function. To do this we go lettter by letter. First, the offset is subtracted from the ordinal values of both the letter to be encoded and the key, and the sum of the values thus obtained modulo 16 is used as index to find the encrypted letter from `string.ascii_lowercase[:16]`. This function works in two steps: 
+
+1. First a (ord = 97) is shifted to 0. This means that b => 1, c =>2, d =>3, ..., z => 25. This is done for both the character and the key whose value is fixed.
+2. Now as we go through the characters, the above value changes for each letter, but remains fixed for the key. Both of them are added i.e the letter is _shifted forward_ by the key value. The `sum mod 16` value is taken as the index for `string.ascii_lowercase[:16]` to get the encrypted value.
 
 
 
