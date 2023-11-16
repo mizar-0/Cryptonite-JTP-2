@@ -25,6 +25,15 @@ The second function is a shift function that uses a key to shift the letters of 
 1. First a (ord = 97) is shifted to 0. This means that b => 1, c =>2, d =>3, ..., z => 25. This is done for both the character and the key whose value is fixed.
 2. Now as we go through the characters, the above value changes for each letter, but remains fixed for the key. Both of them are added i.e the letter is _shifted forward_ by the key value. The `sum mod 16` value is taken as the index for `string.ascii_lowercase[:16]` to get the encrypted value.
 
+![new_caesar_sol_B png](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/6192edca-78cb-42d8-b2a5-150d04501f80)
+
+The above figure shows how the second function works. It can be used to write the decryption code, which is seen below.
+
+![new_caesar_sol_A](https://github.com/mizar-0/Cryptonite-JTP-2/assets/76529146/3c36d6b1-e976-43ba-b74f-d6dbb0548b84)
+
+From all the strings that are obtained, we need to identify the one we need. Since the challenge is named new caeser, we select the one starting with et tu? which references one of the most famous lines from Shakespeare's Julius Caeser.
+
+flag: picoCTF{et_tu?_23217b54456fb10e908b5e87c6e89156}
 
 
 
